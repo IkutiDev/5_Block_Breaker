@@ -231,8 +231,9 @@ GameObject:
   - component: {fileID: 208366075}
   - component: {fileID: 208366078}
   - component: {fileID: 208366077}
+  - component: {fileID: 208366079}
   m_Layer: 0
-  m_Name: ballGrey
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,7 +295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208366074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.79, y: 6.31, z: 0}
+  m_LocalPosition: {x: 5, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -335,8 +336,22 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: a09f1c7b6586f194abb11ddc7a4b9857, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &208366079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208366074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c437a4211d706494e8ffc3da7a097a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle: {fileID: 591671541}
+  ballVelocity: {x: 2, y: 15}
 --- !u!1 &591671537
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +365,7 @@ GameObject:
   - component: {fileID: 591671540}
   - component: {fileID: 591671541}
   m_Layer: 0
-  m_Name: paddleBlu
+  m_Name: Paddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -447,6 +462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenWidthInUnits: 16
+  minX: 1
+  maxX: 15
 --- !u!1 &659570350
 GameObject:
   m_ObjectHideFlags: 0
