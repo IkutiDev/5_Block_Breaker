@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,15 @@ public class Ball : MonoBehaviour
     private Vector2 _paddleToBallVector2;
 
     private bool _hasStarted;
+
+    private void Awake()
+    {
+        if (paddle == null)
+        {
+            paddle=FindObjectOfType<Paddle>();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
