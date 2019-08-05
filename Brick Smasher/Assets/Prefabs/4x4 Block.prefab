@@ -95,6 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakingSoundEffect: {fileID: 8300000, guid: fe17a3e9dabb5c24ba15353faef1fc17, type: 3}
   breakingSoundEffectVolume: 0.2
+  scoreMultiplier: 3
 --- !u!61 &1912603335455829785
 BoxCollider2D:
   m_ObjectHideFlags: 0

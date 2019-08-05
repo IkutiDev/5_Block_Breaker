@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d0d08013cdc38794a9bb75e3d541f935
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Chillout For Personal Use
+  fontNames:
+  - Chillout For Personal Use
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 35a9276732c8c81469fe9146821ee91e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
