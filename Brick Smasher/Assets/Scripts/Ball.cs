@@ -64,7 +64,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Vector2 velocityTweak = new Vector2(UnityEngine.Random.Range(0f,randomFactor), UnityEngine.Random.Range(0f, randomFactor));
+        Vector2 velocityTweak = new Vector2(UnityEngine.Random.Range(0.1f,randomFactor), UnityEngine.Random.Range(0.1f, randomFactor));
         if (_hasStarted)
         {
             AudioClip clip = ballSoundEffects[UnityEngine.Random.Range(0, ballSoundEffects.Length)];
