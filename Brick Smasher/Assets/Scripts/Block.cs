@@ -9,12 +9,16 @@ public class Block : MonoBehaviour
     [SerializeField] private float breakingSoundEffectVolume=0.8f;
     [SerializeField] private GameObject blockParticleSystem;
     [SerializeField] private int scoreMultiplier = 1;
+    [SerializeField] private int maxHits;
+    [SerializeField] private Sprite[] hitSprites;
+    private int _timesHit;
     private Level _level;
     private GameSession _gameSession;
-
+    private SpriteRenderer _spriteRenderer;
     private void Start()
     {
         _gameSession = FindObjectOfType<GameSession>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         CountBreakableBlocks();
     }
 
@@ -31,8 +35,27 @@ public class Block : MonoBehaviour
     {
         if (CompareTag("Breakable"))
         {
+            HandleHit();
+        }
+    }
+
+    private void HandleHit()
+    {
+        _timesHit++;
+        if (_timesHit >= maxHits)
+        {
             DestroyBlock();
         }
+        else
+        {
+            ShowNextHitSprite();
+        }
+    }
+
+    void ShowNextHitSprite()
+    {
+        int spriteIndex = _timesHit - 1;
+        _spriteRenderer.sprite = hitSprites[spriteIndex];
     }
     void DestroyBlock()
     {
